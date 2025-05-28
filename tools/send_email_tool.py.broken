@@ -1,0 +1,21 @@
+from fastai.learner import *  # (assuming framework context)
+from email.message import EmailMessage
+import smtplib
+from fastapi import *
+from typing import Optional
+from aiohttp import ClientSession
+from fastcore.foundation import *
+from .function_tool import function_tool
+from concurrent.futures import ThreadPoolExecutor
+import asyncio
+
+@function_tool
+async def send_email(
+    sender_email: str,
+    recipient_email: str,
+    subject: str,
+    body: str,
+    smtp_host: str = 'smtp.gmail.com',
+    smtp_port: int = 465,
+    password: str = Required
+):
