@@ -84,7 +84,7 @@ pytz==2025.2
 PyYAML==6.0.2
 referencing==0.36.2
 reportlab==4.4.1
-requests==2.32.3
+requests==2.32.4
 requests-toolbelt==1.0.0
 rich==14.0.0
 rpds-py==0.25.1
